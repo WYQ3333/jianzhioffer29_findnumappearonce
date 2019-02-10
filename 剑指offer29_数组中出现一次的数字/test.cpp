@@ -4,7 +4,7 @@
 using namespace std;
 
 
-class Solution {
+class Solution1 {
 public:
 	void FindNumsAppearOnce(vector<int> data, int* num1, int *num2) {
 		sort(data.begin(), data.end());
@@ -34,8 +34,31 @@ public:
 	}
 };
 
+class Solution {
+public:
+	void FindNumsAppearOnce(vector<int> data, int* num1, int *num2) {
+		int i = 0;
+		int j = 0;
+		int count = 0;
+		for (i = 0; i < data.size(); ++i){
+			for (j = i + 1; j < data.size(); ++j){
+				if (data[j] == data[i]){
+					break;
+				}
+			}
+			if (j==data.size()&&count == 0){
+				num1[0] = data[i];
+				count++;
+			}
+			else if(j==data.size()&&count==1){
+				num2[0] = data[i];
+			}
+		}
+	}
+};
+
 void TestFunc(){
-	vector<int> array{1, 1, 2, 3, 3, 3, 4, 4, 5, 5};
+	vector<int> array{1, 1, 2, 3, 3, 3, 4, 4, 5, 5,6};
 	Solution s;
 	int num1[] = { 0 };
 	int num2[] = { 0 };
