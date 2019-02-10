@@ -58,7 +58,7 @@ public:
 };
 
 void TestFunc(){
-	vector<int> array{1, 1, 2, 3, 3, 3, 4, 4, 5, 5,6};
+	vector<int> array{2, 4, 3, 6, 3, 2, 5, 5};
 	Solution s;
 	int num1[] = { 0 };
 	int num2[] = { 0 };
