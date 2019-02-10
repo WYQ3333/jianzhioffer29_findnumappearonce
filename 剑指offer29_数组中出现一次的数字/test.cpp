@@ -35,7 +35,13 @@ public:
 };
 
 void TestFunc(){
-
+	vector<int> array{1, 1, 2, 3, 3, 3, 4, 4, 5, 5};
+	Solution s;
+	int num1[] = { 0 };
+	int num2[] = { 0 };
+	s.FindNumsAppearOnce(array, num1, num2);
+	cout << num1[0] << endl;
+	cout << num2[0] << endl;
 }
 
 int main(){
