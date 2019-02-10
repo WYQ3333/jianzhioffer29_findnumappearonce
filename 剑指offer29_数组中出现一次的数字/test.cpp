@@ -52,6 +52,7 @@ public:
 			}
 			else if(j==data.size()&&count==1){
 				num2[0] = data[i];
+				count++;
 			}
 		}
 	}
